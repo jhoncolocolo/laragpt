@@ -1,66 +1,135 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel GPT Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+This Laravel project uses artificial intelligence to populate database tables with automatically generated data. Additionally, it provides the option to fill the tables manually.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requirements
+- PHP >= 8.1
+- Laravel 9,10,11
+- Composer
+- MySQL / PostgreSQL / SQLite / SQL Server
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Clone the project
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+  https://github.com/jhoncolocolo/laragpt.git
+```
 
-## Learning Laravel
+Go to the project directory
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+  cd laragpt
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Install dependencies
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+  composer install
+```
 
-## Laravel Sponsors
+### Previously it is necessary to create a database for this case we will call it YOUR_DATABASE_NAME
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Environment Variables
+For this example, the database name is: YOUR_DATABASE_NAME but if you want to change the name, put the name of your preference in the correct parameter of the .(env) file
 
-### Premium Partners
+In the environment (.env) file, update these variables, remember you need to rename the file in the root folder .env.example to .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+# After 
 
-## Contributing
+`DB_CONNECT=mysql`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+`DB_HOST=127.0.0.1`
 
-## Code of Conduct
+`DB_PORT=3306`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+`DB_DATABASE=YOUR_DATABASE_NAME`
 
-## Security Vulnerabilities
+`DB_USERNAME=YOUR_USER_NAME`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+`DB_USERNAME=YOUR_PASSWORD`
 
-## License
+After running these migrations:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## You Have Two Options
+
+run migrations through Artificial Intelligence o run the basic way
+
+# Run migration and a seeders through Artificial Intelligence
+
+For this you need two steps
+
+## First run migration
+```bash
+php artisan migrate:refresh
+```
+## Second run seeders through Artificial Intelligence
+
+```bash
+php artisan app:fill-data-with-gpt-command
+```
+(Important This command after exec php artisan migrate:refresh)
+![Información Comando AI](https://github.com/jhoncolocolo/laragpt/assets/1965532/e10469b9-d59a-4c4c-a248-0bde61ad38e2)
+
+
+#### On the other hand you can run migrations and seeders through basic way
+
+```bash
+php artisan migrate:refresh --seed
+```
+
+Start the server
+
+```bash
+  php artisan serve
+```
+
+# Exec TEST
+
+To see that our system works well, execute this command
+
+```bash
+  php artisan test
+```
+
+![test](https://github.com/jhoncolocolo/laragpt/assets/1965532/86931afe-f2b3-470f-8d35-23326eaf84d8)
+
+# For our Project we use the package GEMINI AI 
+
+More info https://github.com/google-gemini-php/laravel?tab=readme-ov-file#installation
+
+## Setup Gemini AI
+
+### Installation
+
+First, install Gemini via the [Composer](https://getcomposer.org/) package manager:
+
+```bash
+composer require google-gemini-php/laravel
+```
+
+Next, execute the install command:
+
+```bash
+php artisan gemini:install
+```
+
+This will create a config/gemini.php configuration file in your project, which you can modify to your needs using environment variables. Blank environment variables for the Gemini API key is already appended to your .env file.
+
+```
+GEMINI_API_KEY=
+```
+
+
+### Setup your API key
+To use the Gemini API, you'll need an API key. If you don't already have one, create a key in Google AI Studio.
+
+[Get an API key](https://makersuite.google.com/app/apikey)
+
+Prerequisites
+Create a Google Cloud Platform account: https://cloud.google.com/.
+
+Enable the Gemini API: https://support.gemini.com/hc/en-us/articles/204732875-How-can-I-use-the-Gemini-API.
+
+Create an API key: https://cloud.google.com/docs/authentication/api-keys?hl=en.
+Install the Gemini API PHP package: composer require gemini-api-php/laravel
+
