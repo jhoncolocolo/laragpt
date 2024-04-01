@@ -140,6 +140,85 @@ Enable the Gemini API: https://support.gemini.com/hc/en-us/articles/204732875-Ho
 Create an API key: https://cloud.google.com/docs/authentication/api-keys?hl=en.
 Install the Gemini API PHP package: composer require gemini-api-php/laravel
 
+# Other Considerations in the way of programming code for this project we have this methodology
+```bash
+  +---------------------+
+  | routes/api.php      |
+  |                     |
+  | Define routes and  |
+  | direct requests to |
+  | the controller.     |
+  +---------------------+
+              |
+              v
+  +---------------------+
+  | Controller          |
+  |                     |
+  | Receives the request|
+  | and directs the flow|
+  | to the appropriate  |
+  | components.         |
+  +---------------------+
+              |
+              v
+  +---------------------+
+  | HTTP Request        |
+  | and Request         |
+  | Validation          |
+  |                     |
+  | Handles input       |
+  | validation. If not  |
+  | valid, returns a    |
+  | 405 error.          |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Service             |
+  |                     |
+  | Coordinates and     |
+  | executes business   |
+  | logic.              |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Repository          |
+  |                     |
+  | Interacts with the  |
+  | model and performs  |
+  | database operations.|
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Model               |
+  |                     |
+  | Represents data and |
+  | business rules.     |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Database            |
+  |                     |
+  | Stores and retrieves|
+  | data based on model |
+  | operations.         |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Response (View)     |
+  |                     |
+  | Formats and sends   |
+  | the response to the |
+  | client.             |
+  +---------------------+
+
+```
+
+
 /***********************************************************************************/
 # Spanish Version
 
@@ -274,3 +353,89 @@ Habilita la API de Gemini: https://support.gemini.com/hc/en-us/articles/20473287
 
 Crea una clave de API: https://cloud.google.com/docs/authentication/api-keys?hl=en.
 Instala el paquete de PHP de la API de Gemini: composer require gemini-api-php/laravel
+
+
+# Otras Consideraciones en la forma de programar código para este proyecto tenemos esta metodología
+
+```bash
+  +---------------------+
+  | routes/api.php      |
+  |                     |
+  | Define las rutas   |
+  | y dirige las       |
+  | solicitudes al     |
+  | controlador        |
+  +---------------------+
+              |
+              v
+  +---------------------+
+  | Controller          |
+  |                     |
+  | Recibe la solicitud|
+  | y dirige el flujo  |
+  | hacia los          |
+  | componentes        |
+  | adecuados.         |
+  +---------------------+
+              |
+              v
+  +---------------------+
+  | HTTP Request        |
+  | y Validación       |
+  | de la petición      |
+  |                     |
+  | Maneja la           |
+  | validación de los  |
+  | datos de entrada.   |
+  | Si no es válida,   |
+  | devuelve un error  |
+  | 405.                |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Servicio            |
+  |                     |
+  | Coordina y ejecuta  |
+  | la lógica de        |
+  | negocio.            |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Repositorio         |
+  |                     |
+  | Interactúa con el   |
+  | modelo y realiza    |
+  | operaciones de base |
+  | de datos.           |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Modelo              |
+  |                     |
+  | Representa los datos|
+  | y las reglas de     |
+  | negocio.            |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Base de Datos       |
+  |                     |
+  | Almacena y recupera |
+  | datos según las      |
+  | operaciones del     |
+  | modelo.             |
+  +---------------------+
+             |
+             v
+  +---------------------+
+  | Respuesta (Vista)   |
+  |                     |
+  | Formatea y envía la |
+  | respuesta al cliente|
+  +---------------------+
+
+```
