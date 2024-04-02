@@ -125,24 +125,24 @@ This will create a config/gemini.php configuration file in your project, which y
 ```
 GEMINI_API_KEY=
 ```
+## API Guide
 
-## Guía de API
+### Users
 
-### Usuarios
-
-#### Obtener todos los usuarios
-- Método: GET
+#### Get all users
+- Method: GET
 - URL: `https://laragpt.cljws.com/api/users`
 
-#### Obtener un usuario específico
-- Método: GET
+#### Get a specific user
+- Method: GET
 - URL: `https://laragpt.cljws.com/api/users/{id}`
-  - Reemplazar `{id}` con el ID del usuario deseado.
+  - Replace `{id}` with the desired user ID.
 
-#### Crear un nuevo usuario
-- Método: POST
+#### Create a new user
+- Method: POST
 - URL: `https://laragpt.cljws.com/api/users`
-- Estructura del cuerpo de la solicitud:
+- Request body structure:
+
 ```json
   {
       "name": "string",
@@ -150,25 +150,24 @@ GEMINI_API_KEY=
       "image_path": "string"
   }
 ```
+### Update an existing user
+Method: PUT
+URL: https://laragpt.cljws.com/api/users/{id}
+Replace {id} with the ID of the user you want to update.
+Request body structure:
 
-### Actualizar un usuario existente
-- Método: PUT
-- URL: https://laragpt.cljws.com/api/users/{id}
-- Reemplazar {id} con el ID del usuario que deseas actualizar.
-- Estructura del cuerpo de la solicitud:
 ```json
+Copy code
 {
     "name": "string",
     "email": "string",
     "image_path": "string"
 }
 ```
-
-### Eliminar un usuario
-Método: DELETE
+### Delete a user
+Method: DELETE
 URL: https://laragpt.cljws.com/api/users/{id}
-Reemplazar {id} con el ID del usuario que deseas eliminar.
-
+Replace {id} with the ID of the user you want to delete.
 
 
 ### Setup your API key
@@ -397,6 +396,51 @@ Habilita la API de Gemini: https://support.gemini.com/hc/en-us/articles/20473287
 
 Crea una clave de API: https://cloud.google.com/docs/authentication/api-keys?hl=en.
 Instala el paquete de PHP de la API de Gemini: composer require gemini-api-php/laravel
+
+## Guía de API
+
+### Usuarios
+
+#### Obtener todos los usuarios
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/users`
+
+#### Obtener un usuario específico
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/users/{id}`
+  - Reemplazar `{id}` con el ID del usuario deseado.
+
+#### Crear un nuevo usuario
+- Método: POST
+- URL: `https://laragpt.cljws.com/api/users`
+- Estructura del cuerpo de la solicitud:
+```json
+  {
+      "name": "string",
+      "email": "string",
+      "image_path": "string"
+  }
+```
+
+### Actualizar un usuario existente
+- Método: PUT
+- URL: https://laragpt.cljws.com/api/users/{id}
+- Reemplazar {id} con el ID del usuario que deseas actualizar.
+- Estructura del cuerpo de la solicitud:
+```json
+{
+    "name": "string",
+    "email": "string",
+    "image_path": "string"
+}
+```
+
+### Eliminar un usuario
+Método: DELETE
+URL: https://laragpt.cljws.com/api/users/{id}
+Reemplazar {id} con el ID del usuario que deseas eliminar.
+
+
 
 
 # Otras Consideraciones en la forma de programar código para este proyecto tenemos esta metodología
