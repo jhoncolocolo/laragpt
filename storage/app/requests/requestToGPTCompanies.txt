@@ -1,0 +1,13 @@
+Por favor generame un Json con un arreglo de objetos con estas estructura
+
+[{
+    'name'=>random(string),
+    'image_path'=>random(string),
+    'location'=>random(string),
+    'industry'=>random(string),
+    'user_id'=>random(integer between 1 and 22)
+}]
+
+y con las siguientes aspectos :
+para este array necesito que genere 11 objetos subarrays respetando
+las  caracteristicas de cada campo

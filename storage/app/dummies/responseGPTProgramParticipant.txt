@@ -1,0 +1,154 @@
+```json
+[
+  {
+    "program_id": 11,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 1
+  },
+  {
+    "program_id": 14,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 7
+  },
+  {
+    "program_id": 6,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 2
+  },
+  {
+    "program_id": 13,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 4
+  },
+  {
+    "program_id": 5,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 7
+  },
+  {
+    "program_id": 12,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 1
+  },
+  {
+    "program_id": 2,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 2
+  },
+  {
+    "program_id": 7,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 22
+  },
+  {
+    "program_id": 1,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 8
+  },
+  {
+    "program_id": 9,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 10
+  },
+  {
+    "program_id": 8,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 12
+  },
+  {
+    "program_id": 9,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 5
+  },
+  {
+    "program_id": 3,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 18
+  },
+  {
+    "program_id": 1,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 15
+  },
+  {
+    "program_id": 10,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 5
+  },
+  {
+    "program_id": 7,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 20
+  },
+  {
+    "program_id": 12,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 2
+  },
+  {
+    "program_id": 8,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 8
+  },
+  {
+    "program_id": 4,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 16
+  },
+  {
+    "program_id": 2,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 6
+  },
+  {
+    "program_id": 9,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 12
+  },
+  {
+    "program_id": 5,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 7
+  },
+  {
+    "program_id": 13,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 7
+  },
+  {
+    "program_id": 6,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 3
+  },
+  {
+    "program_id": 5,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 4
+  },
+  {
+    "program_id": 4,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 3
+  },
+  {
+    "program_id": 8,
+    "entity_type": "App\\Models\\Challenge",
+    "entity_id": 11
+  },
+  {
+    "program_id": 14,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 14
+  },
+  {
+    "program_id": 1,
+    "entity_type": "App\\Models\\Company",
+    "entity_id": 2
+  },
+  {
+    "program_id": 11,
+    "entity_type": "App\\Models\\User",
+    "entity_id": 5
+  }
+]
+```

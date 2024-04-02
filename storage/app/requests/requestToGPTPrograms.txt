@@ -1,0 +1,14 @@
+Por favor generame un Json con un arreglo de objetos con estas estructura
+
+[{
+    'title'=>random(string,max characters(30)),
+    'description'=>random(string,max characters(50))),
+    'start_date'='random(date('Y-M-D'))',
+    'end_date'='random(date('Y-M-D'))',
+    'user_id'=>random(integer between 1 and 22)
+}]
+
+y con las siguientes aspectos :
+para este array necesito que genere 14 objetos subarrays respetando las caracteristicas
+de cada campo y para este objeto que tengas en cuenta
+que el end_date debe ser una fecha mayor al start_date

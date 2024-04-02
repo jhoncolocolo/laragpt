@@ -1,0 +1,124 @@
+```json
+[
+  {
+    "name": "Ariana Grande",
+    "email": "arianagrande@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Billie Eilish",
+    "email": "billieeilish@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Bruno Mars",
+    "email": "brunomars@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "BTS",
+    "email": "bts@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  },
+  {
+    "name": "Drake",
+    "email": "drake@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Dua Lipa",
+    "email": "otherdualipa@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Ed Sheeran",
+    "email": "edsheeran@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "Eminem",
+    "email": "eminem@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  },
+  {
+    "name": "Justin Bieber",
+    "email": "justinbieber@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Lady Gaga",
+    "email": "ladygaga@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Maroon 5",
+    "email": "maroon5@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "Post Malone",
+    "email": "postmalone@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  },
+  {
+    "name": "Selena Gomez",
+    "email": "selenagomez@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Shawn Mendes",
+    "email": "shawnmendes@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Taylor Swift",
+    "email": "taylorswift@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "The Weeknd",
+    "email": "theweeknd@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  },
+  {
+    "name": "Travis Scott",
+    "email": "travisscott@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Zayn Malik",
+    "email": "zaynmalik@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Bad Bunny",
+    "email": "badbunny@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "Other Eilish",
+    "email": "other@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  },
+  {
+    "name": "BTS",
+    "email": "otherbts@example.com",
+    "image_path": "https://i.imgur.com/abcdefg.jpg"
+  },
+  {
+    "name": "Drake",
+    "email": "otherdrake@example.com",
+    "image_path": "https://i.imgur.com/hijklm.jpg"
+  },
+  {
+    "name": "Dua Lipa",
+    "email": "dualipa@example.com",
+    "image_path": "https://i.imgur.com/nopqrs.jpg"
+  },
+  {
+    "name": "Ed Sheeran",
+    "email": "otheredsheeran@example.com",
+    "image_path": "https://i.imgur.com/tuvwxy.jpg"
+  }
+]
+```

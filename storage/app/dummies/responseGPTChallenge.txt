@@ -1,0 +1,94 @@
+```json
+[
+  {
+    "title": "El viaje del héroe",
+    "description": "Una aventura épica sobre un joven que emprende un viaje para salvar su mundo.",
+    "difficulty": 3,
+    "user_id": 12
+  },
+  {
+    "title": "La isla misteriosa",
+    "description": "Un grupo de náufragos se refugia en una isla misteriosa y descubre un secreto oculto.",
+    "difficulty": 2,
+    "user_id": 17
+  },
+  {
+    "title": "El señor de los anillos",
+    "description": "La búsqueda épica de un pequeño grupo de hobbits para destruir el Anillo Único.",
+    "difficulty": 3,
+    "user_id": 4
+  },
+  {
+    "title": "Harry Potter y la piedra filosofal",
+    "description": "Un joven descubre que es un mago y se embarca en una aventura en el mundo mágico.",
+    "difficulty": 1,
+    "user_id": 10
+  },
+  {
+    "title": "La Guerra de los Tronos",
+    "description": "Una historia épica de fantasía sobre familias nobles que luchan por el poder.",
+    "difficulty": 3,
+    "user_id": 2
+  },
+  {
+    "title": "El nombre del viento",
+    "description": "La historia de un joven huérfano que se convierte en un poderoso mago.",
+    "difficulty": 2,
+    "user_id": 15
+  },
+  {
+    "title": "La llamada de lo salvaje",
+    "description": "La aventura de un perro doméstico que se une a una manada de lobos salvajes.",
+    "difficulty": 1,
+    "user_id": 6
+  },
+  {
+    "title": "El gran Gatsby",
+    "description": "Una historia trágica sobre un hombre rico y su sueño de amor.",
+    "difficulty": 2,
+    "user_id": 8
+  },
+  {
+    "title": "Matar a un ruiseñor",
+    "description": "La historia de una joven que crece en el sur de Estados Unidos durante la Gran Depresión.",
+    "difficulty": 2,
+    "user_id": 1
+  },
+  {
+    "title": "El principito",
+    "description": "La historia de un niño que viaja por el universo y aprende sobre la vida y el amor.",
+    "difficulty": 1,
+    "user_id": 5
+  },
+  {
+    "title": "Cien años de soledad",
+    "description": "Una historia épica sobre una familia multigeneracional y su historia en Colombia.",
+    "difficulty": 3,
+    "user_id": 13
+  },
+  {
+    "title": "El hombre invisible",
+    "description": "La historia de un científico que inventa una forma de hacerse invisible.",
+    "difficulty": 2,
+    "user_id": 7
+  },
+  {
+    "title": "El retrato de Dorian Gray",
+    "description": "La historia de un hombre cuya belleza permanece eterna mientras su alma se corrompe.",
+    "difficulty": 2,
+    "user_id": 11
+  },
+  {
+    "title": "Anna Karenina",
+    "description": "Una historia trágica sobre una mujer que lucha contra la sociedad y sus propias pasiones.",
+    "difficulty": 3,
+    "user_id": 9
+  },
+  {
+    "title": "Moby Dick",
+    "description": "La historia épica de un capitán obsesionado con cazar una ballena blanca.",
+    "difficulty": 3,
+    "user_id": 3
+  }
+]
+```

@@ -1,0 +1,14 @@
+Por favor generame un Json con un arreglo de objetos con estas estructura
+
+[
+    {
+        'name'=>random(string),
+        'email'=>random(string),
+        'image_path'=>random(string)
+    }
+]
+
+y con las siguientes aspectos :
+para este array necesito que genere 24 objetos subarrays respetando
+las  caracteristicas de cada campo y que no repitas subarrays con el valor de email
+por ejemplo que no haya dos subarrays con el valor billieeilish@example.com para email o casos similares

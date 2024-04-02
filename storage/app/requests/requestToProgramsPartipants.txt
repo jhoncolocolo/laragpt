@@ -1,0 +1,16 @@
+Por favor Generame un Json con un array de objetos en total 30 objetos aleatorios
+para program_id, entity_type y entity_id para entity_type
+[
+    {
+        'program_id'=>random(integer between 1 and 14),
+        'entity_type'=>random(any string of this ['App\\Models\\User','App\\Models\\Challenge', 'App\\Models\\Company']),
+        'entity_id'=>random(integer)
+    }
+]
+
+Las Opciones pueden ser cualquiera entre App\\Models\\User,App\\Models\\Challenge,
+App\\Models\\Company
+para program_id Valores aleatorios entre 1 y 14 y para entity_id
+Si es App\\Model\\User valores aleatorios entre 1 y 22,
+si es App\\Models\\Challenge valores aleatorios entre 1 y 12,
+si es es App\\Models\\Company valores aleatorios entre 1 y 10

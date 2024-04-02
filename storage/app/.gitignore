@@ -1,5 +1,19 @@
-*
+# Ignorar todo por defecto
+/*
+
+# Permitir el rastreo de las carpetas necesarias
 !public/
 !dummies/
 !requests/
+
+# Permitir el rastreo de todos los archivos dentro de las carpetas permitidas
+public/*
+dummies/*
+requests/*
+
+# Excluir explícitamente todos los archivos dentro de las carpetas dummies y requests
+!dummies/*
+!requests/*
+
+# Permitir el rastreo del archivo .gitignore
 !.gitignore

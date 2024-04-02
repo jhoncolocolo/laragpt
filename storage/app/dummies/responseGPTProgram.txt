@@ -1,0 +1,102 @@
+```json
+[
+  {
+    "title": "Sprint Planning",
+    "description": "Planning the next sprint",
+    "start_date": "2023-03-06",
+    "end_date": "2023-03-10",
+    "user_id": 12
+  },
+  {
+    "title": "Daily Standup",
+    "description": "Team standup meeting",
+    "start_date": "2023-03-07",
+    "end_date": "2023-03-07",
+    "user_id": 15
+  },
+  {
+    "title": "Code Review",
+    "description": "Reviewing code changes",
+    "start_date": "2023-03-08",
+    "end_date": "2023-03-08",
+    "user_id": 4
+  },
+  {
+    "title": "Sprint Retrospective",
+    "description": "Reflecting on the past sprint",
+    "start_date": "2023-03-13",
+    "end_date": "2023-03-15",
+    "user_id": 9
+  },
+  {
+    "title": "Release Planning",
+    "description": "Planning the next release",
+    "start_date": "2023-03-14",
+    "end_date": "2023-03-17",
+    "user_id": 18
+  },
+  {
+    "title": "Weekly Team Meeting",
+    "description": "Weekly team meeting to discuss progress and challenges",
+    "start_date": "2023-03-15",
+    "end_date": "2023-03-15",
+    "user_id": 1
+  },
+  {
+    "title": "Sprint Backlog Refinement",
+    "description": "Refining the sprint backlog",
+    "start_date": "2023-03-16",
+    "end_date": "2023-03-16",
+    "user_id": 5
+  },
+  {
+    "title": "User Story Mapping",
+    "description": "Creating user story maps",
+    "start_date": "2023-03-17",
+    "end_date": "2023-03-17",
+    "user_id": 7
+  },
+  {
+    "title": "Design Review",
+    "description": "Reviewing design changes",
+    "start_date": "2023-03-20",
+    "end_date": "2023-03-20",
+    "user_id": 11
+  },
+  {
+    "title": "Project Planning",
+    "description": "Planning the next project",
+    "start_date": "2023-03-21",
+    "end_date": "2023-03-24",
+    "user_id": 13
+  },
+  {
+    "title": "One-on-One Meeting",
+    "description": "Meeting with team member to discuss progress and support",
+    "start_date": "2023-03-22",
+    "end_date": "2023-03-22",
+    "user_id": 2
+  },
+  {
+    "title": "Performance Review",
+    "description": "Reviewing team member performance",
+    "start_date": "2023-03-23",
+    "end_date": "2023-03-23",
+    "user_id": 10
+  },
+  {
+    "title": "Team Building Activity",
+    "description": "Team building activity to foster collaboration and team spirit",
+    "start_date": "2023-03-24",
+    "end_date": "2023-03-24",
+    "user_id": 19
+  },
+  {
+    "title": "Release Retrospective",
+    "description": "Reflecting on the past release",
+    "start_date": "2023-03-27",
+    "end_date": "2023-03-29",
+    "user_id": 6
+  }
+]
+```
