@@ -125,9 +125,9 @@ This will create a config/gemini.php configuration file in your project, which y
 ```
 GEMINI_API_KEY=
 ```
-## API Guide
+# API Guide
 
-### Users
+## Users
 
 #### Get all users
 - Method: GET
@@ -169,8 +169,184 @@ Method: DELETE
 URL: https://laragpt.cljws.com/api/users/{id}
 Replace {id} with the ID of the user you want to delete.
 
+## Challenge
 
-### Setup your API key
+#### Get all challenges
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/challenges`
+
+#### Get a specific challenge
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/challenges/{id}`
+  - Replace `{id}` with the desired challenge ID.
+
+#### Create a new challenge
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/challenges`
+- Request body structure:
+
+```json
+  {
+     "title": "string",
+     "description": "string",
+     "difficulty": "integer between 1 and 3",
+     "user_id": "integer"
+  }
+```
+### Update an existing challenge
+Method: PUT
+URL: https://laragpt.cljws.com/api/challenges/{id}
+Replace {id} with the ID of the challenge you want to update.
+Request body structure:
+
+```json
+  {
+     "title": "string",
+     "description": "string",
+     "difficulty": "integer between 1 and 3",
+     "user_id": "integer"
+  }
+```
+### Delete a challenge
+Method: DELETE
+URL: https://laragpt.cljws.com/api/challenges/{id}
+Replace {id} with the ID of the challenge you want to delete.
+
+
+
+## Company
+
+#### Get all companies
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/companies`
+
+#### Get a specific company
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/companies/{id}`
+  - Replace `{id}` with the desired company ID.
+
+#### Create a new company
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/companies`
+- Request body structure:
+
+```json
+  {
+    'name':'string',
+    'image_path':string,
+    'location':string,
+    'industry':string,
+    'user_id':'integer'
+  }
+```
+### Update an existing company
+Method: PUT
+URL: https://laragpt.cljws.com/api/companies/{id}
+Replace {id} with the ID of the company you want to update.
+Request body structure:
+
+```json
+  {
+    'name':'string',
+    'image_path':string,
+    'location':string,
+    'industry':string,
+    'user_id':'integer'
+  }
+```
+### Delete a company
+Method: DELETE
+URL: https://laragpt.cljws.com/api/companies/{id}
+Replace {id} with the ID of the company you want to delete.
+
+## Program
+
+#### Get all programs
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/programs`
+
+#### Get a specific program
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/programs/{id}`
+  - Replace `{id}` with the desired program ID.
+
+#### Create a new program
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/programs`
+- Request body structure:
+
+```json
+  {
+    'title':'string',
+    'description':'string',
+    'start_date':'date('Y-M-D')',
+    'end_date':'date('Y-M-D')',
+    'user_id':integer
+  }
+```
+### Update an existing program
+Method: PUT
+URL: https://laragpt.cljws.com/api/programs/{id}
+Replace {id} with the ID of the program you want to update.
+Request body structure:
+
+```json
+  {
+    'title':'string',
+    'description':'string',
+    'start_date':'date('Y-M-D')',
+    'end_date':'date('Y-M-D')',
+    'user_id':integer
+  }
+```
+### Delete a program
+Method: DELETE
+URL: https://laragpt.cljws.com/api/programs/{id}
+Replace {id} with the ID of the program you want to delete.
+
+## Program
+
+#### Get all program_participants
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/program_participants`
+
+#### Get a specific program_participant
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/program_participants/{id}`
+  - Replace `{id}` with the desired program_participants ID.
+
+#### Create a new program_participant
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/program_participants`
+- Request body structure:
+
+```json
+  {
+        'program_participant_id':random(integer between 1 and 14),
+        'entity_type':random(any string of this ['App\\Models\User','App\Models\Challenge', 'App\Models\Company']),
+        'entity_id':random(integer)
+  }
+```
+### Update an existing program_participant
+Method: PUT
+URL: https://laragpt.cljws.com/api/program_participants/{id}
+Replace {id} with the ID of the program_participant you want to update.
+Request body structure:
+
+```json
+  {
+        'program_participant_id':random(integer between 1 and 14),
+        'entity_type':random(any string of this ['App\\Models\User','App\Models\Challenge', 'App\Models\Company']),
+        'entity_id':random(integer)
+  }
+```
+### Delete a program_participant
+Method: DELETE
+URL: https://laragpt.cljws.com/api/program_participants/{id}
+Replace {id} with the ID of the program_participants you want to delete.
+
+
+# Setup your API key
 To use the Gemini API, you'll need an API key. If you don't already have one, create a key in Google AI Studio.
 
 [Get an API key](https://makersuite.google.com/app/apikey)
