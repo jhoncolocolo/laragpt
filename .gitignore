@@ -18,5 +18,5 @@ yarn-error.log
 /.vscode
 
 # Excluir los directorios específicos de storage
-!/storage/dummies/
-!/storage/request/
+!/storage/app/dummies/
+!/storage/app/request/
