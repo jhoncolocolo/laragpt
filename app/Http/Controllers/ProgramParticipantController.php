@@ -8,11 +8,36 @@ use App\Http\Requests\ProgramParticipantRequest;
 
 class ProgramParticipantController extends Controller
 {
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return  \Illuminate\Http\Response
+     /**
+     * Show All Program Participants
+     * @OA\Get (
+     *     path="/api/program_participants",
+     *     tags={"Program Participants"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="List of ProgramParticipants",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="current_page",type="integer",example="1"),
+     *             @OA\Property(
+     *                 property="data",
+     *                 type="array",
+     *                 @OA\Items(type="object",
+     *                     @OA\Property(property="id",type="integer",example="1"),
+     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
+     *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+     *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+     *                 )
+     *             ),
+     *             @OA\Property(property="first_page_url", type="string", example="http://127.0.0.1:8000/api/program_participants?page=1"),
+     *             @OA\Property( property="last_page_url",type="string",example="http://127.0.0.1:8000/api/program_participants?page=3"),
+     *             @OA\Property( property="next_page_url",type="string", example="http://127.0.0.1:8000/api/program_participants?page=2"),
+     *             @OA\Property(property="prev_page_url",type="string",example=null),
+     *             @OA\Property(property="per_page",type="integer",example="10"),
+     *             @OA\Property(property="total",type="integer",example="24")
+     *         )
+     *     )
+     * )
      */
     public function index(IndexRequest $request)
     {
@@ -32,11 +57,36 @@ class ProgramParticipantController extends Controller
         return response()->json($data, 200);
     }
 
+
     /**
-     * Display the specified resource.
-     *
-     * @param    \App\Models\ProgramParticipant  $ProgramParticipant
-     * @return  \Illuminate\Http\Response
+     * Show Specific Program Participant
+     * @OA\Get (
+     *     path="/api/program_participants/{id}",
+     *     tags={"Program Participants"},
+     *     @OA\Parameter(
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="string")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="OK",
+     *         @OA\JsonContent(
+     *                     @OA\Property(property="id",type="integer",example="1"),
+     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
+     *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+     *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+     *         )
+     *     ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="NOT FOUND",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="No exists Program Participant with id : #"),
+     *          )
+     *      )
+     * )
      */
     public function show($id)
     {
@@ -44,10 +94,41 @@ class ProgramParticipantController extends Controller
         return response()->json($programParticipant);
     }
 
-    /*
-    * Store ProgramParticipant
-    * @return  void
-    */
+    /**
+     * Almacena un nuevo Program Participant en el sistema.
+     * @OA\Post (
+     *     path="/api/program_participants",
+     *     tags={"Program Participants"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *            required={"program_id","entity_type","entity_id"},
+     *                     @OA\Property(property="id",type="integer",example="1"),
+     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
+     *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+     *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Program Participant creado exitosamente",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Record Entered Successfully"),
+     *             @OA\Property(property="last_insert_id", type="integer", example=1)
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=405,
+     *         description="Validation exception",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Validation exception"),
+     *             @OA\Property(property="errors", type="object")
+     *         )
+     *     )
+     * )
+     */
     public function store(ProgramParticipantRequest $request)
      {
        //Save programParticipants
@@ -64,10 +145,52 @@ class ProgramParticipantController extends Controller
        return response()->json($data);
   }
 
-    /*
-    * Update ProgramParticipant
-    * @return  void
-    */
+    /**
+     * Update Exist Program Participant in Database
+     * @OA\Put (
+     *     path="/api/program_participants/{program_participant}",
+     *     tags={"Program Participants"},
+     *     @OA\Parameter(
+     *         name="program",
+     *         in="path",
+     *         description="ID del program a actualizar",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *            required={"program_id","entity_type","entity_id"},
+     *                     @OA\Property(property="id",type="integer",example="1"),
+     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
+     *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+     *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Program Participant actualizado exitosamente",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Record Update Successfully"),
+     *             @OA\Property(property="created_at", type="string", example="2023-02-23T00:09:16.000000Z")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Program Participant no encontrado"
+     *     ),
+     *     @OA\Response(
+     *         response=405,
+     *         description="Validation exception",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Validation exception"),
+     *             @OA\Property(property="errors", type="object")
+     *         )
+     *     )
+     * )
+     */
     public function update($programParticipant,ProgramParticipantRequest $request)
      {
        //Update programParticipants
@@ -84,10 +207,32 @@ class ProgramParticipantController extends Controller
        return response()->json($data);
     }
 
-    /*
-    * Delete $programParticipant
-    * @return  void
-    */
+    /**
+     * Remove Program Participant From System
+     * @OA\Delete (
+     *     path="/api/program_participants/{program_participant}",
+     *     tags={"Program Participants"},
+     *     @OA\Parameter(
+     *         name="program_participant",
+     *         in="path",
+     *         description="ID del program_participant a eliminar",
+     *         required=true,
+     *         @OA\Schema(type="integer")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Program Participant eliminado exitosamente",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Record Delete Successfully")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Program no encontrado"
+     *     )
+     * )
+     */
     public function destroy($programParticipant)
      {
        //Delete programParticipants

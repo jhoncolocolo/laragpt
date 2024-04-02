@@ -198,6 +198,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         App\Providers\GeneralServiceProvider::class,
         /*End Seccion Necesary Repostories and Services*/
+        L5Swagger\L5SwaggerServiceProvider::class,
     ],
 
     /*
