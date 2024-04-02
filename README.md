@@ -616,6 +616,180 @@ Método: DELETE
 URL: https://laragpt.cljws.com/api/users/{id}
 Reemplazar {id} con el ID del usuario que deseas eliminar.
 
+## Challenge
+
+#### Obtener todo los Challenges
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/challenges`
+
+#### Obtener un challenge Especifio
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/challenges/{id}`
+  - Reemplazar {id} con el ID del challenge que deseas buscar.
+Estructura del cuerpo de la solicitud:
+
+#### Create a new challenge
+- Método: POST
+- URL: `https://laragpt.cljws.com/api/challenges`
+- Request body structure:
+
+```json
+  {
+     "title": "string",
+     "description": "string",
+     "difficulty": "integer between 1 and 3",
+     "user_id": "integer"
+  }
+```
+### Update an existing challenge
+Método: PUT
+URL: https://laragpt.cljws.com/api/challenges/{id}
+Reemplazar {id} con el ID del challenge que deseas actualizar.
+Estructura del cuerpo de la solicitud:
+
+```json
+  {
+     "title": "string",
+     "description": "string",
+     "difficulty": "integer between 1 and 3",
+     "user_id": "integer"
+  }
+```
+### Delete a challenge
+Method: DELETE
+URL: https://laragpt.cljws.com/api/challenges/{id}
+Reemplazar {id} con el ID del challenge que deseas eliminar.
+
+## Company
+
+#### Obtener todas las companies
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/companies`
+
+#### Get a specific company
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/companies/{id}`
+  - Replace `{id}` with the desired company ID.
+
+#### Create a new company
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/companies`
+- Request body structure:
+
+```json
+  {
+    'name':'string',
+    'image_path':string,
+    'location':string,
+    'industry':string,
+    'user_id':'integer'
+  }
+```
+### Update an existing company
+Method: PUT
+URL: https://laragpt.cljws.com/api/companies/{id}
+Replace {id} with the ID of the company you want to update.
+Request body structure:
+
+```json
+  {
+    'name':'string',
+    'image_path':string,
+    'location':string,
+    'industry':string,
+    'user_id':'integer'
+  }
+```
+### Delete a company
+Method: DELETE
+URL: https://laragpt.cljws.com/api/companies/{id}
+Replace {id} with the ID of the company you want to delete.
+
+## Program
+
+#### Get all programs
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/programs`
+
+#### Get a specific program
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/programs/{id}`
+  - Replace `{id}` with the desired program ID.
+
+#### Create a new program
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/programs`
+- Request body structure:
+
+```json
+  {
+    'title':'string',
+    'description':'string',
+    'start_date':'date('Y-M-D')',
+    'end_date':'date('Y-M-D')',
+    'user_id':integer
+  }
+```
+### Update an existing program
+Method: PUT
+URL: https://laragpt.cljws.com/api/programs/{id}
+Replace {id} with the ID of the program you want to update.
+Request body structure:
+
+```json
+  {
+    'title':'string',
+    'description':'string',
+    'start_date':'date('Y-M-D')',
+    'end_date':'date('Y-M-D')',
+    'user_id':integer
+  }
+```
+### Delete a program
+Method: DELETE
+URL: https://laragpt.cljws.com/api/programs/{id}
+Replace {id} with the ID of the program you want to delete.
+
+## Program
+
+#### Get all program_participants
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/program_participants`
+
+#### Get a specific program_participant
+- Method: GET
+- URL: `https://laragpt.cljws.com/api/program_participants/{id}`
+  - Replace `{id}` with the desired program_participants ID.
+
+#### Create a new program_participant
+- Method: POST
+- URL: `https://laragpt.cljws.com/api/program_participants`
+- Request body structure:
+
+```json
+  {
+        'program_participant_id':random(integer between 1 and 14),
+        'entity_type':random(any string of this ['App\\Models\User','App\Models\Challenge', 'App\Models\Company']),
+        'entity_id':random(integer)
+  }
+```
+### Update an existing program_participant
+Method: PUT
+URL: https://laragpt.cljws.com/api/program_participants/{id}
+Replace {id} with the ID of the program_participant you want to update.
+Request body structure:
+
+```json
+  {
+        'program_participant_id':random(integer between 1 and 14),
+        'entity_type':random(any string of this ['App\\Models\User','App\Models\Challenge', 'App\Models\Company']),
+        'entity_id':random(integer)
+  }
+```
+### Delete a program_participant
+Method: DELETE
+URL: https://laragpt.cljws.com/api/program_participants/{id}
+Replace {id} with the ID of the program_participants you want to delete.
 
 
 
