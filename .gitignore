@@ -16,7 +16,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-
-# Excluir los directorios específicos de storage
-!/storage/app/dummies/
-!/storage/app/request/
