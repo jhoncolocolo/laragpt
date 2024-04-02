@@ -126,6 +126,50 @@ This will create a config/gemini.php configuration file in your project, which y
 GEMINI_API_KEY=
 ```
 
+## Guía de API
+
+### Usuarios
+
+#### Obtener todos los usuarios
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/users`
+
+#### Obtener un usuario específico
+- Método: GET
+- URL: `https://laragpt.cljws.com/api/users/{id}`
+  - Reemplazar `{id}` con el ID del usuario deseado.
+
+#### Crear un nuevo usuario
+- Método: POST
+- URL: `https://laragpt.cljws.com/api/users`
+- Estructura del cuerpo de la solicitud:
+```json
+  {
+      "name": "string",
+      "email": "string",
+      "image_path": "string"
+  }
+```
+
+### Actualizar un usuario existente
+- Método: PUT
+- URL: https://laragpt.cljws.com/api/users/{id}
+- Reemplazar {id} con el ID del usuario que deseas actualizar.
+- Estructura del cuerpo de la solicitud:
+```json
+{
+    "name": "string",
+    "email": "string",
+    "image_path": "string"
+}
+```
+
+### Eliminar un usuario
+Método: DELETE
+URL: https://laragpt.cljws.com/api/users/{id}
+Reemplazar {id} con el ID del usuario que deseas eliminar.
+
+
 
 ### Setup your API key
 To use the Gemini API, you'll need an API key. If you don't already have one, create a key in Google AI Studio.
