@@ -6,6 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use App\Rules\EntityIdValid;
 
 class ProgramParticipantRequest extends FormRequest
 {
@@ -29,7 +30,9 @@ class ProgramParticipantRequest extends FormRequest
         return [
             'program_id' => 'required|integer|exists:programs,id',
             'entity_type' => ['required', Rule::in(['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'])],
-            'entity_id' => 'required|integer',
+            'entity_id' => ['required','integer',
+                         new EntityIdValid($this->input('entity_type'))
+            ],
         ];
     }
 

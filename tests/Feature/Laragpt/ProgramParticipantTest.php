@@ -217,6 +217,32 @@ class ProgramParticipantTest extends TestCase
     }
 
     /**
+     * test fail because Program Participant Break Polymorphism Create
+     *
+     * @return  void
+     */
+    public function testFailProgramParticipantBreakPolymorphismCreate()
+    {
+        //Entity Id not exists
+        $nonExistentChallengeId = Challenge::max('id') + 1;
+
+        $programId = Program::inRandomOrder()->first()->id;
+
+        $response = $this->json('POST','api/program_participants',[
+                'program_id' =>$programId,
+                'entity_type' => 'App\Models\Challenge',
+                'entity_id' => $nonExistentChallengeId,
+        ]);
+        $response->assertStatus(405)
+        ->assertJson([
+            'message' => 'Validation exception',
+            'errors' => [
+                'entity_id' => ['The entity id '.$nonExistentChallengeId.' not exists in entity_type App\Models\Challenge']
+            ]
+        ]);
+    }
+
+    /**
      * test update programParticipant.
      *
      * @return  void
@@ -239,19 +265,42 @@ class ProgramParticipantTest extends TestCase
     }
 
     /**
+     * test fail because Program Participant Break Polymorphism Update
+     *
+     * @return  void
+     */
+    public function testFailProgramParticipantBreakPolymorphismUpdate()
+    {
+        //Entity Id not exists
+        $nonExistentChallengeId = Challenge::max('id') + 1;
+
+        $programParticipant = ProgramParticipant::factory()->count(1)->create();
+
+        $response = $this->json('PUT','api/program_participants/'.$programParticipant[0]["id"],[
+            'program_id' => $program_id = $programParticipant[0]["program_id"],
+            'entity_type' => 'App\Models\Challenge',
+            'entity_id' => $nonExistentChallengeId,
+        ]);
+
+        $response->assertStatus(405)
+        ->assertJson([
+            'message' => 'Validation exception',
+            'errors' => [
+                'entity_id' => ['The entity id '.$nonExistentChallengeId.' not exists in entity_type App\Models\Challenge']
+            ]
+        ]);
+    }
+
+    /**
      * test delete programParticipant.
      *
      * @return  void
      */
     public function testProgramParticipantDelete()
     {
-        $programParticipant = ProgramParticipant::create([
-            'program_id' => Program::inRandomOrder()->first()->id,
-            'entity_type' => $this->faker->text(50),
-            'entity_id' => $this->faker->randomDigit(),
-        ]);
+        $programParticipant = ProgramParticipant::factory()->count(1)->create()[0];
 
-        $response = $this->json('DELETE','api/program_participants/'.$programParticipant->id);
+        $response = $this->json('DELETE','api/program_participants/'.$programParticipant['id']);
 
         $this->assertDatabaseCount('program_participants', 0);
 
