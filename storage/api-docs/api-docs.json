@@ -18,7 +18,7 @@
                     "Challenges"
                 ],
                 "summary": "Show All Challenges",
-                "operationId": "df61bd7503e62a2251f358931e0f3a5f",
+                "operationId": "7983c431d0c40e16a62f940cfc9e232c",
                 "parameters": [
                     {
                         "name": "page",
@@ -132,7 +132,7 @@
                     "Challenges"
                 ],
                 "summary": "Almacena un nuevo challenge en el sistema.",
-                "operationId": "63ffd18fb5f5371ec322250145cbb046",
+                "operationId": "8a09f92da738e0ecd7c740869ab0f20b",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -219,7 +219,7 @@
                     "Challenges"
                 ],
                 "summary": "Show Specific Challenge",
-                "operationId": "ed8928d8cd2720e0dcce6cd0e29767f1",
+                "operationId": "8e3633507905cc0794f2e5ec4fdf0114",
                 "parameters": [
                     {
                         "name": "id",
@@ -288,7 +288,7 @@
                     "Challenges"
                 ],
                 "summary": "Update Exist Challenge in Database",
-                "operationId": "a7c91e857e50cd280fbafc18ad9f6df5",
+                "operationId": "2bf67507bf6d0ee23c10dca3eab575a2",
                 "parameters": [
                     {
                         "name": "challenge",
@@ -387,7 +387,7 @@
                     "Challenges"
                 ],
                 "summary": "Remove Challenge From System",
-                "operationId": "ee00796c790a08f161efe1bb28f0773b",
+                "operationId": "fa0da1f01af6d1bdfb7701df2f17ea8f",
                 "parameters": [
                     {
                         "name": "challenge",
@@ -428,7 +428,7 @@
                     "Companies"
                 ],
                 "summary": "Show All Companies",
-                "operationId": "54f966c056050f9db4fff6ee5a45a76a",
+                "operationId": "dfe64606062883ffaf37bc85eb881cd1",
                 "parameters": [
                     {
                         "name": "page",
@@ -546,7 +546,7 @@
                     "Companies"
                 ],
                 "summary": "Almacena un nuevo company en el sistema.",
-                "operationId": "00e2db7b0f71c32b377f4dfc4dd685a8",
+                "operationId": "6e37cd7180b99735373eac34f4d9010f",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -638,7 +638,7 @@
                     "Companies"
                 ],
                 "summary": "Show Specific Company",
-                "operationId": "01c261c039e4b27beeb888ef46bd86db",
+                "operationId": "d9509cebc2e48974d066856d86a3344b",
                 "parameters": [
                     {
                         "name": "id",
@@ -711,7 +711,7 @@
                     "Companies"
                 ],
                 "summary": "Update Exist Company in Database",
-                "operationId": "17ee846405381b70d408b7532b44601a",
+                "operationId": "70fc5071a64b2a81fa9a58f23e04e5e9",
                 "parameters": [
                     {
                         "name": "company",
@@ -815,7 +815,7 @@
                     "Companies"
                 ],
                 "summary": "Remove Company From System",
-                "operationId": "815006ac9bb0fb97b1cad53b1a620652",
+                "operationId": "589263864bd9bed9e85bce93becddc27",
                 "parameters": [
                     {
                         "name": "company",
@@ -856,7 +856,7 @@
                     "Programs"
                 ],
                 "summary": "Show All Programs",
-                "operationId": "47ac3eb2cf8e8baecb8f435baeb11e5f",
+                "operationId": "22cb8caa9b3bf1e6f0ebfe93d1050941",
                 "parameters": [
                     {
                         "name": "page",
@@ -970,7 +970,7 @@
                     "Programs"
                 ],
                 "summary": "Almacena un nuevo program en el sistema.",
-                "operationId": "4dc263669846ce07e9c0d74ad5a52114",
+                "operationId": "e7bda7fe203895f575f989247c3ca276",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1059,7 +1059,7 @@
                     "Programs"
                 ],
                 "summary": "Show Specific Program",
-                "operationId": "24bee254dddcb3e3949e349392f041f9",
+                "operationId": "186e55ca9074e5eea08d91c20e316915",
                 "parameters": [
                     {
                         "name": "id",
@@ -1128,7 +1128,7 @@
                     "Programs"
                 ],
                 "summary": "Update Exist Program in Database",
-                "operationId": "2af562fbf77cbf0a163c32d65fcd46dc",
+                "operationId": "ea23a4a280b76647bda91a062fb84fd2",
                 "parameters": [
                     {
                         "name": "program",
@@ -1229,7 +1229,7 @@
                     "Programs"
                 ],
                 "summary": "Remove Program From System",
-                "operationId": "ac04d77e370a158cc2b8bcabd00bd8ec",
+                "operationId": "e949b845bfcf414aedd709ce158485fe",
                 "parameters": [
                     {
                         "name": "program",
@@ -1270,7 +1270,7 @@
                     "Program Participants"
                 ],
                 "summary": "Show All Program Participants",
-                "operationId": "1aad22350e7cbd46fd9d530de8cbe9a6",
+                "operationId": "f10cde175367af13169c2b1d44e68510",
                 "parameters": [
                     {
                         "name": "page",
@@ -1380,7 +1380,7 @@
                     "Program Participants"
                 ],
                 "summary": "Almacena un nuevo Program Participant en el sistema.",
-                "operationId": "e1e8eedd2d07cb61ad76f295b0e3f835",
+                "operationId": "d2ca367a2d3c651df697a63ce4c7876a",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1392,21 +1392,17 @@
                                     "entity_id"
                                 ],
                                 "properties": {
-                                    "id": {
+                                    "program_id": {
                                         "type": "integer",
                                         "example": "1"
                                     },
-                                    "program_id": {
-                                        "type": "integer",
-                                        "example": "My Program Id"
-                                    },
                                     "entity_type": {
                                         "type": "string",
-                                        "example": "My Entity Type any One of this 'App\\Models\\User', 'App\\Models\\Challenge', 'App\\Models\\Company'"
+                                        "example": "App\\Models\\Company"
                                     },
                                     "entity_id": {
                                         "type": "integer",
-                                        "example": "My Entity Id"
+                                        "example": "1"
                                     }
                                 },
                                 "type": "object"
@@ -1463,7 +1459,7 @@
                     "Program Participants"
                 ],
                 "summary": "Show Specific Program Participant",
-                "operationId": "e0041af2d785159c59ba4c4ddfffae21",
+                "operationId": "7740ed89c8b3e538ce2f51683f161f63",
                 "parameters": [
                     {
                         "name": "id",
@@ -1522,16 +1518,16 @@
                 }
             }
         },
-        "/api/program_participants/{program_participant}": {
+        "/api/program_participants/{programParticipant}": {
             "put": {
                 "tags": [
                     "Program Participants"
                 ],
                 "summary": "Update Exist Program Participant in Database",
-                "operationId": "b03309f30da46ce59f3867e9950a7b54",
+                "operationId": "b69dd7de7af21a5da168961fce861a7e",
                 "parameters": [
                     {
-                        "name": "program",
+                        "name": "programParticipant",
                         "in": "path",
                         "description": "ID del program a actualizar",
                         "required": true,
@@ -1551,21 +1547,17 @@
                                     "entity_id"
                                 ],
                                 "properties": {
-                                    "id": {
+                                    "program_id": {
                                         "type": "integer",
                                         "example": "1"
                                     },
-                                    "program_id": {
-                                        "type": "integer",
-                                        "example": "My Program Id"
-                                    },
                                     "entity_type": {
                                         "type": "string",
-                                        "example": "My Entity Type any One of this 'App\\Models\\User', 'App\\Models\\Challenge', 'App\\Models\\Company'"
+                                        "example": "App\\Models\\Company"
                                     },
                                     "entity_id": {
                                         "type": "integer",
-                                        "example": "My Entity Id"
+                                        "example": "1"
                                     }
                                 },
                                 "type": "object"
@@ -1617,13 +1609,15 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/api/program_participants/{program_participant}": {
             "delete": {
                 "tags": [
                     "Program Participants"
                 ],
                 "summary": "Remove Program Participant From System",
-                "operationId": "5af78565aa03c4cab8f5f7acec7981ee",
+                "operationId": "c9659d58aa17793b54c40b64d5e730a3",
                 "parameters": [
                     {
                         "name": "program_participant",
@@ -1664,7 +1658,7 @@
                     "Users"
                 ],
                 "summary": "Show All Users",
-                "operationId": "c457726701591d1183b53aa71fc13441",
+                "operationId": "d4783ce1ca660a7592e2d6c88c94e311",
                 "parameters": [
                     {
                         "name": "page",
@@ -1774,7 +1768,7 @@
                     "Users"
                 ],
                 "summary": "Almacena un nuevo usuario en el sistema.",
-                "operationId": "592819a0265360b2014512d6dbfaf0e7",
+                "operationId": "5247c05945fade49482bf89f9c12c219",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1849,7 +1843,7 @@
                     "Users"
                 ],
                 "summary": "Show Specific User",
-                "operationId": "36a33ff774d5cba33c039dec2c3e0287",
+                "operationId": "a940bf1b78d849aeffc39e5bccd3e2be",
                 "parameters": [
                     {
                         "name": "id",
@@ -1922,7 +1916,7 @@
                     "Users"
                 ],
                 "summary": "Update Exist User in Database",
-                "operationId": "e29fc231c7937ab09483d35e6e3d1214",
+                "operationId": "0be9981192050c574fc4eb52fe87d628",
                 "parameters": [
                     {
                         "name": "user",
@@ -2009,7 +2003,7 @@
                     "Users"
                 ],
                 "summary": "Remove User From System",
-                "operationId": "e0f9a385a1d6788b99e519bd98cf7239",
+                "operationId": "c04ef92aaf8e4ec0464d4767c0ecdac0",
                 "parameters": [
                     {
                         "name": "user",
@@ -2044,5 +2038,27 @@
                 }
             }
         }
-    }
+    },
+    "tags": [
+        {
+            "name": "Challenges",
+            "description": "Operations related to Challenges"
+        },
+        {
+            "name": "Companies",
+            "description": "Operations related to Companies"
+        },
+        {
+            "name": "Programs",
+            "description": "Operations related to the Programs"
+        },
+        {
+            "name": "Program Participants",
+            "description": "Operations related to the Programs"
+        },
+        {
+            "name": "Users",
+            "description": "Operations Related To Users"
+        }
+    ]
 }
