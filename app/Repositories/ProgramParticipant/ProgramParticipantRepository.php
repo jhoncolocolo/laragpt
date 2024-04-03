@@ -36,8 +36,8 @@ class ProgramParticipantRepository  implements ProgramParticipantRepositoryInter
     {
       return ProgramParticipant::create(array(
         'program_id' => $data['program_id'],
-        'entity_type' => $data['entity_type'],
-        'entity_id' => $data['entity_id'],
+        'entitiable_type' => $data['entitiable_type'],
+        'entitiable_id' => $data['entitiable_id'],
         'created_at' => Carbon::now()
       ));
     }
@@ -53,8 +53,8 @@ class ProgramParticipantRepository  implements ProgramParticipantRepositoryInter
       $programParticipant = ProgramParticipant::find($programParticipant);
       $programParticipant->fill(array(
         'program_id' => $data['program_id'],
-        'entity_type' => $data['entity_type'],
-        'entity_id' => $data['entity_id'],
+        'entitiable_type' => $data['entitiable_type'],
+        'entitiable_id' => $data['entitiable_id'],
         'updated_at' => Carbon::now()
       ));
       return $programParticipant->save();

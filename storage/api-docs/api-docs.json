@@ -1306,11 +1306,11 @@
                                                         "type": "integer",
                                                         "example": "My Program Id"
                                                     },
-                                                    "entity_type": {
+                                                    "entitiable_type": {
                                                         "type": "string",
                                                         "example": "My Entity Type any One of this 'App\\Models\\User', 'App\\Models\\Challenge', 'App\\Models\\Company'"
                                                     },
-                                                    "entity_id": {
+                                                    "entitiable_id": {
                                                         "type": "integer",
                                                         "example": "My Entity Id"
                                                     }
@@ -1388,19 +1388,19 @@
                             "schema": {
                                 "required": [
                                     "program_id",
-                                    "entity_type",
-                                    "entity_id"
+                                    "entitiable_type",
+                                    "entitiable_id"
                                 ],
                                 "properties": {
                                     "program_id": {
                                         "type": "integer",
                                         "example": "1"
                                     },
-                                    "entity_type": {
+                                    "entitiable_type": {
                                         "type": "string",
                                         "example": "App\\Models\\Company"
                                     },
-                                    "entity_id": {
+                                    "entitiable_id": {
                                         "type": "integer",
                                         "example": "1"
                                     }
@@ -1483,15 +1483,15 @@
                                         },
                                         "program_id": {
                                             "type": "integer",
-                                            "example": "My Program Id"
+                                            "example": "1"
                                         },
-                                        "entity_type": {
+                                        "entitiable_type": {
                                             "type": "string",
                                             "example": "My Entity Type any One of this 'App\\Models\\User', 'App\\Models\\Challenge', 'App\\Models\\Company'"
                                         },
-                                        "entity_id": {
+                                        "entitiable_id": {
                                             "type": "integer",
-                                            "example": "My Entity Id"
+                                            "example": "1"
                                         }
                                     },
                                     "type": "object"
@@ -1543,19 +1543,19 @@
                             "schema": {
                                 "required": [
                                     "program_id",
-                                    "entity_type",
-                                    "entity_id"
+                                    "entitiable_type",
+                                    "entitiable_id"
                                 ],
                                 "properties": {
                                     "program_id": {
                                         "type": "integer",
                                         "example": "1"
                                     },
-                                    "entity_type": {
+                                    "entitiable_type": {
                                         "type": "string",
                                         "example": "App\\Models\\Company"
                                     },
-                                    "entity_id": {
+                                    "entitiable_id": {
                                         "type": "integer",
                                         "example": "1"
                                     }

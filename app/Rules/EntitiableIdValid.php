@@ -7,9 +7,9 @@ use App\Models\User;
 use App\Models\Challenge;
 use App\Models\Company;
 
-class EntityIdValid implements Rule
+class EntitiableIdValid implements Rule
 {
-    protected $entityType;
+    protected $entitiableType;
     protected $value;
 
     /**
@@ -17,9 +17,9 @@ class EntityIdValid implements Rule
      *
      * @return void
      */
-    public function __construct($entityType)
+    public function __construct($entitiableType)
     {
-        $this->entityType = $entityType;
+        $this->entitiableType = $entitiableType;
     }
 
     /**
@@ -32,8 +32,8 @@ class EntityIdValid implements Rule
     public function passes($attribute, $value)
     {
         $this->value = $value;
-        // Check if an entity exists with the given entity_id and entity_type
-        switch ($this->entityType) {
+        // Check if an entitiable exists with the given entitiable_id and entitiable_type
+        switch ($this->entitiableType) {
             case 'App\Models\User':
                 return User::where('id', $value)->exists();
             case 'App\Models\Challenge':
@@ -52,6 +52,6 @@ class EntityIdValid implements Rule
      */
     public function message()
     {
-        return  'The :attribute '.$this->value.' not exists in entity_type ' . $this->entityType;
+        return  'The :attribute '.$this->value.' not exists in entitiable_type ' . $this->entitiableType;
     }
 }

@@ -17,7 +17,7 @@ class ProgramParticipant extends Model
 
 	protected $primaryKey = 'id';
 
-	protected $fillable = ["program_id","entity_type","entity_id"];
+	protected $fillable = ["program_id","entitiable_type","entitiable_id"];
 
 	protected $hidden = ['created_at','updated_at'];
 
@@ -30,7 +30,7 @@ class ProgramParticipant extends Model
         return $this->belongsTo(Program::class);
     }
 
-    public function entity(){
+    public function entitiable(){
         return $this->morphTo();
     }
 }

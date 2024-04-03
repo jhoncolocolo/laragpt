@@ -144,8 +144,8 @@ class ProgramParticipantTest extends TestCase
                 '*' => [
                     'id',
                     'program_id',
-                    'entity_type',
-                    'entity_id'
+                    'entitiable_type',
+                    'entitiable_id'
                 ]
             ],
             'next_page_url',
@@ -166,16 +166,16 @@ class ProgramParticipantTest extends TestCase
    {
        $programParticipant = ProgramParticipant::create([
             'program_id' => $program_id_1 =  Program::inRandomOrder()->first()->id,
-            'entity_type' => $entity_type_1 =  $this->faker->text(50),
-            'entity_id' => $entity_id_1 =  $this->faker->randomDigit(),
+            'entitiable_type' => $entitiable_type_1 =  $this->faker->text(50),
+            'entitiable_id' => $entitiable_id_1 =  $this->faker->randomDigit(),
         ]);
 
        $response = $this->json('GET','api/program_participants/'.$programParticipant->id);
 
        $response->assertJson([
             'program_id' => $program_id_1,
-            'entity_type' => $entity_type_1,
-            'entity_id' => $entity_id_1,
+            'entitiable_type' => $entitiable_type_1,
+            'entitiable_id' => $entitiable_id_1,
         ]);
 
        $response->assertStatus(200);
@@ -205,28 +205,28 @@ class ProgramParticipantTest extends TestCase
     public function testProgramParticipantCreate()
     {
         // Possible entities
-        $entityTypes = ['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'];
+        $entitiableTypes = ['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'];
 
-        $entityType = $this->faker->randomElement($entityTypes);
-        $entityId = null;
+        $entitiableType = $this->faker->randomElement($entitiableTypes);
+        $entitiableId = null;
 
-        switch ($entityType) {
+        switch ($entitiableType) {
             case 'App\Models\User':
-                $entityId = User::getRandomId();
+                $entitiableId = User::getRandomId();
                 break;
             case 'App\Models\Challenge':
-                $entityId = Challenge::getRandomId();
+                $entitiableId = Challenge::getRandomId();
                 break;
             case 'App\Models\Company':
-                $entityId = Company::getRandomId();
+                $entitiableId = Company::getRandomId();
                 break;
         }
         $programId = Program::inRandomOrder()->first()->id;
 
         $response = $this->json('POST','api/program_participants',[
                 'program_id' =>$programId,
-                'entity_type' => $entityType,
-                'entity_id' => $entityId,
+                'entitiable_type' => $entitiableType,
+                'entitiable_id' => $entitiableId,
         ]);
         $this->assertDatabaseCount('program_participants', 1);
         $response->assertStatus(200);
@@ -246,14 +246,14 @@ class ProgramParticipantTest extends TestCase
 
         $response = $this->json('POST','api/program_participants',[
                 'program_id' =>$programId,
-                'entity_type' => 'App\Models\Challenge',
-                'entity_id' => $nonExistentChallengeId,
+                'entitiable_type' => 'App\Models\Challenge',
+                'entitiable_id' => $nonExistentChallengeId,
         ]);
         $response->assertStatus(405)
         ->assertJson([
             'message' => 'Validation exception',
             'errors' => [
-                'entity_id' => ['The entity id '.$nonExistentChallengeId.' not exists in entity_type App\Models\Challenge']
+                'entitiable_id' => ['The entitiable id '.$nonExistentChallengeId.' not exists in entitiable_type App\Models\Challenge']
             ]
         ]);
     }
@@ -269,8 +269,8 @@ class ProgramParticipantTest extends TestCase
 
         $response = $this->json('PUT','api/program_participants/'.$programParticipant[0]["id"],[
             'program_id' => $program_id = $programParticipant[0]["program_id"],
-            'entity_type' => $programParticipant[0]["entity_type"],
-            'entity_id' => $programParticipant[0]["entity_id"],
+            'entitiable_type' => $programParticipant[0]["entitiable_type"],
+            'entitiable_id' => $programParticipant[0]["entitiable_id"],
         ]);
 
         $this->assertDatabaseHas('program_participants', [
@@ -294,15 +294,15 @@ class ProgramParticipantTest extends TestCase
 
         $response = $this->json('PUT','api/program_participants/'.$programParticipant[0]["id"],[
             'program_id' => $program_id = $programParticipant[0]["program_id"],
-            'entity_type' => 'App\Models\Challenge',
-            'entity_id' => $nonExistentChallengeId,
+            'entitiable_type' => 'App\Models\Challenge',
+            'entitiable_id' => $nonExistentChallengeId,
         ]);
 
         $response->assertStatus(405)
         ->assertJson([
             'message' => 'Validation exception',
             'errors' => [
-                'entity_id' => ['The entity id '.$nonExistentChallengeId.' not exists in entity_type App\Models\Challenge']
+                'entitiable_id' => ['The entitiable id '.$nonExistentChallengeId.' not exists in entitiable_type App\Models\Challenge']
             ]
         ]);
     }

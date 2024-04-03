@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
-use App\Rules\EntityIdValid;
+use App\Rules\EntitiableIdValid;
 
 class ProgramParticipantRequest extends FormRequest
 {
@@ -29,9 +29,9 @@ class ProgramParticipantRequest extends FormRequest
     {
         return [
             'program_id' => 'required|integer|exists:programs,id',
-            'entity_type' => ['required', Rule::in(['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'])],
-            'entity_id' => ['required','integer',
-                         new EntityIdValid($this->input('entity_type'))
+            'entitiable_type' => ['required', Rule::in(['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'])],
+            'entitiable_id' => ['required','integer',
+                         new EntitiableIdValid($this->input('entitiable_type'))
             ],
         ];
     }
@@ -41,10 +41,10 @@ class ProgramParticipantRequest extends FormRequest
         return [
             'program_id.required' => 'The field Program is Required',
             'program_id.exists' => 'The field Program Not exists in database',
-            'entity_type.required' => 'The entity type is required.',
-            'entity_type.in' => 'The entity type must be one of the following: App\Models\User, App\Models\Challenge or App\Models\Company.',
-            'entity_id.required' => 'The entity ID is required.',
-            'entity_id.integer' => 'The entity ID must be an integer.',
+            'entitiable_type.required' => 'The entitiable type is required.',
+            'entitiable_type.in' => 'The entitiable type must be one of the following: App\Models\User, App\Models\Challenge or App\Models\Company.',
+            'entitiable_id.required' => 'The entitiable ID is required.',
+            'entitiable_id.integer' => 'The entitiable ID must be an integer.',
         ];
     }
 

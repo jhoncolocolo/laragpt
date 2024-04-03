@@ -31,8 +31,8 @@ class ProgramParticipantDocs{
     *                 @OA\Items(type="object",
     *                     @OA\Property(property="id",type="integer",example="1"),
     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
-    *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
-    *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+    *                     @OA\Property(property="entitiable_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+    *                     @OA\Property(property="entitiable_id",type="integer", example="My Entity Id")
     *                 )
     *             ),
     *             @OA\Property(property="first_page_url", type="string", example="http://127.0.0.1:8000/api/program_participants?page=1"),
@@ -80,9 +80,9 @@ class ProgramParticipantDocs{
      *         description="OK",
      *         @OA\JsonContent(
      *                     @OA\Property(property="id",type="integer",example="1"),
-     *                     @OA\Property(property="program_id",type="integer",example="My Program Id"),
-     *                     @OA\Property(property="entity_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
-     *                     @OA\Property(property="entity_id",type="integer", example="My Entity Id")
+     *                     @OA\Property(property="program_id",type="integer",example="1"),
+     *                     @OA\Property(property="entitiable_type",type="string",example="My Entity Type any One of this 'App\Models\User', 'App\Models\Challenge', 'App\Models\Company'"),
+     *                     @OA\Property(property="entitiable_id",type="integer", example="1")
      *         )
      *     ),
      *      @OA\Response(
@@ -104,10 +104,10 @@ class ProgramParticipantDocs{
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
-     *            required={"program_id","entity_type","entity_id"},
+     *            required={"program_id","entitiable_type","entitiable_id"},
      *                     @OA\Property(property="program_id",type="integer",example="1"),
-     *                     @OA\Property(property="entity_type",type="string",example="App\Models\Company"),
-     *                     @OA\Property(property="entity_id",type="integer", example="1")
+     *                     @OA\Property(property="entitiable_type",type="string",example="App\Models\Company"),
+     *                     @OA\Property(property="entitiable_id",type="integer", example="1")
      *         )
      *     ),
      *     @OA\Response(
@@ -147,10 +147,10 @@ class ProgramParticipantDocs{
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
-     *            required={"program_id","entity_type","entity_id"},
+     *            required={"program_id","entitiable_type","entitiable_id"},
      *                     @OA\Property(property="program_id",type="integer",example="1"),
-     *                     @OA\Property(property="entity_type",type="string",example="App\Models\Company"),
-     *                     @OA\Property(property="entity_id",type="integer", example="1")
+     *                     @OA\Property(property="entitiable_type",type="string",example="App\Models\Company"),
+     *                     @OA\Property(property="entitiable_id",type="integer", example="1")
      *         )
      *     ),
      *     @OA\Response(

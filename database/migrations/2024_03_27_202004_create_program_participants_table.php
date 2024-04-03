@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('program_participants', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('program_id')->comment("Programs Table Id ");
-            $table->morphs('entity');
+            $table->morphs('entitiable');
             $table->timestamps();
             $table->foreign('program_id')
                 ->references('id')

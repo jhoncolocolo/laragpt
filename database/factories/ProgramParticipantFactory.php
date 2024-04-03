@@ -25,26 +25,26 @@ class ProgramParticipantFactory extends Factory
         // Possible entities
         $entityTypes = ['App\Models\User', 'App\Models\Challenge', 'App\Models\Company'];
 
-        $entityType = $this->faker->randomElement($entityTypes);
-        $entityId = null;
+        $entitiableType = $this->faker->randomElement($entityTypes);
+        $entitiableId = null;
 
-        switch ($entityType) {
+        switch ($entitiableType) {
             case 'App\Models\User':
-                $entityId = User::getRandomId();
+                $entitiableId = User::getRandomId();
                 break;
             case 'App\Models\Challenge':
-                $entityId = Challenge::getRandomId();
+                $entitiableId = Challenge::getRandomId();
                 break;
             case 'App\Models\Company':
-                $entityId = Company::getRandomId();
+                $entitiableId = Company::getRandomId();
                 break;
         }
         $programId = Program::inRandomOrder()->first()->id;
 
         $newArray = [
                 'program_id' =>$programId,
-                'entity_type' => $entityType,
-                'entity_id' => $entityId,
+                'entitiable_type' => $entitiableType,
+                'entitiable_id' => $entitiableId,
         ];
 
         return $newArray;
