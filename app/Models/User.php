@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     //Morph Relation
     public  function programParticipant(){
-        return $this->morphOne(ProgramParticipant::class,'entity');
+        return $this->morphOne(ProgramParticipant::class,'entitiable');
     }
 
     //Method for Seeders and Tests

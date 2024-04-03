@@ -29,7 +29,7 @@ class Company extends Model
 
   //Morph Relation
   public  function programParticipant(){
-    return $this->morphOne('App\Models\ProgramParticipant','entity');
+    return $this->morphOne(ProgramParticipant::class,'entitiable');
   }
 
   //Method for Seeders and Tests
