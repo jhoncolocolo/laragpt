@@ -13,6 +13,13 @@ class ProgramParticipantController extends Controller
      * @OA\Get (
      *     path="/api/program_participants",
      *     tags={"Program Participants"},
+     *     @OA\Parameter(
+     *         name="page",
+     *         in="query",
+     *         description="Número de página",
+     *         required=false,
+     *         @OA\Schema(type="integer", default=1)
+     *     ),
      *     @OA\Response(
      *         response=200,
      *         description="List of ProgramParticipants",
@@ -35,6 +42,23 @@ class ProgramParticipantController extends Controller
      *             @OA\Property(property="prev_page_url",type="string",example=null),
      *             @OA\Property(property="per_page",type="integer",example="10"),
      *             @OA\Property(property="total",type="integer",example="24")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="The requested page is beyond the limit"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Not found Registries"
+     *     ),
+     *     @OA\Response(
+     *         response=405,
+     *         description="Validation exception",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Validation exception"),
+     *             @OA\Property(property="errors", type="object")
      *         )
      *     )
      * )

@@ -15,6 +15,13 @@ class UserController extends Controller
      * @OA\Get (
      *     path="/api/users",
      *     tags={"Users"},
+     *     @OA\Parameter(
+     *         name="page",
+     *         in="query",
+     *         description="Número de página",
+     *         required=false,
+     *         @OA\Schema(type="integer", default=1)
+     *     ),
      *     @OA\Response(
      *         response=200,
      *         description="Lista de usuarios obtenida exitosamente",
@@ -30,58 +37,35 @@ class UserController extends Controller
      *                 type="array",
      *                 @OA\Items(
      *                     type="object",
-     *                     @OA\Property(
-     *                         property="id",
-     *                         type="integer",
-     *                         example="1"
-     *                     ),
-     *                     @OA\Property(
-     *                         property="name",
-     *                         type="string",
-     *                         example="Geraldine Chavez"
-     *                     ),
-     *                     @OA\Property(
-     *                         property="email",
-     *                         type="string",
-     *                         example="geraldinechavez@example.com"
-     *                     ),
-     *                     @OA\Property(
-     *                         property="image_path",
-     *                         type="string",
-     *                         example="https://randomuser.me/api/portraits/women/23.jpg"
-     *                     )
+     *                     @OA\Property(property="id",type="integer",example="1"),
+     *                     @OA\Property(property="name",type="string",example="Geraldine Chavez"),
+     *                     @OA\Property(property="email",type="string",example="geraldinechavez@example.com"),
+     *                     @OA\Property(property="image_path",type="string",example="https://randomuser.me/api/portraits/women/23.jpg")
      *                 )
      *             ),
-     *             @OA\Property(
-     *                 property="first_page_url",
-     *                 type="string",
-     *                 example="http://127.0.0.1:8000/api/users?page=1"
-     *             ),
-     *             @OA\Property(
-     *                 property="last_page_url",
-     *                 type="string",
-     *                 example="http://127.0.0.1:8000/api/users?page=3"
-     *             ),
-     *             @OA\Property(
-     *                 property="next_page_url",
-     *                 type="string",
-     *                 example="http://127.0.0.1:8000/api/users?page=2"
-     *             ),
-     *             @OA\Property(
-     *                 property="prev_page_url",
-     *                 type="string",
-     *                 example=null
-     *             ),
-     *             @OA\Property(
-     *                 property="per_page",
-     *                 type="integer",
-     *                 example="10"
-     *             ),
-     *             @OA\Property(
-     *                 property="total",
-     *                 type="integer",
-     *                 example="24"
-     *             )
+     *             @OA\Property(property="first_page_url",type="string",example="http://127.0.0.1:8000/api/users?page=1"),
+     *             @OA\Property(property="last_page_url",type="string",example="http://127.0.0.1:8000/api/users?page=3"),
+     *             @OA\Property(property="next_page_url",type="string",example="http://127.0.0.1:8000/api/users?page=2"),
+     *             @OA\Property(property="prev_page_url",type="string",example=null),
+     *             @OA\Property(property="per_page",type="integer",example="10"),
+     *             @OA\Property(property="total", type="integer",example="24")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="The requested page is beyond the limit"
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Not found Registries"
+     *     ),
+     *     @OA\Response(
+     *         response=405,
+     *         description="Validation exception",
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="message", type="string", example="Validation exception"),
+     *             @OA\Property(property="errors", type="object")
      *         )
      *     )
      * )

@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "http://localhost",
+            "url": "http://127.0.0.1:8000",
             "description": "My Server"
         }
     ],
@@ -19,6 +19,18 @@
                 ],
                 "summary": "Show All Challenges",
                 "operationId": "df61bd7503e62a2251f358931e0f3a5f",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Número de página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "List of Challenges",
@@ -81,6 +93,31 @@
                                         "total": {
                                             "type": "integer",
                                             "example": "24"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The requested page is beyond the limit"
+                    },
+                    "404": {
+                        "description": "Not found Registries"
+                    },
+                    "405": {
+                        "description": "Validation exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation exception"
+                                        },
+                                        "errors": {
+                                            "type": "object"
                                         }
                                     },
                                     "type": "object"
@@ -392,6 +429,18 @@
                 ],
                 "summary": "Show All Companies",
                 "operationId": "54f966c056050f9db4fff6ee5a45a76a",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Número de página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "List of Companies",
@@ -458,6 +507,31 @@
                                         "total": {
                                             "type": "integer",
                                             "example": "24"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The requested page is beyond the limit"
+                    },
+                    "404": {
+                        "description": "Not found Registries"
+                    },
+                    "405": {
+                        "description": "Validation exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation exception"
+                                        },
+                                        "errors": {
+                                            "type": "object"
                                         }
                                     },
                                     "type": "object"
@@ -783,6 +857,18 @@
                 ],
                 "summary": "Show All Programs",
                 "operationId": "47ac3eb2cf8e8baecb8f435baeb11e5f",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Número de página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "List of Programs",
@@ -845,6 +931,31 @@
                                         "total": {
                                             "type": "integer",
                                             "example": "24"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The requested page is beyond the limit"
+                    },
+                    "404": {
+                        "description": "Not found Registries"
+                    },
+                    "405": {
+                        "description": "Validation exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation exception"
+                                        },
+                                        "errors": {
+                                            "type": "object"
                                         }
                                     },
                                     "type": "object"
@@ -1160,6 +1271,18 @@
                 ],
                 "summary": "Show All Program Participants",
                 "operationId": "1aad22350e7cbd46fd9d530de8cbe9a6",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Número de página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "List of ProgramParticipants",
@@ -1218,6 +1341,31 @@
                                         "total": {
                                             "type": "integer",
                                             "example": "24"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The requested page is beyond the limit"
+                    },
+                    "404": {
+                        "description": "Not found Registries"
+                    },
+                    "405": {
+                        "description": "Validation exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation exception"
+                                        },
+                                        "errors": {
+                                            "type": "object"
                                         }
                                     },
                                     "type": "object"
@@ -1517,6 +1665,18 @@
                 ],
                 "summary": "Show All Users",
                 "operationId": "c457726701591d1183b53aa71fc13441",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Número de página",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Lista de usuarios obtenida exitosamente",
@@ -1575,6 +1735,31 @@
                                         "total": {
                                             "type": "integer",
                                             "example": "24"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "The requested page is beyond the limit"
+                    },
+                    "404": {
+                        "description": "Not found Registries"
+                    },
+                    "405": {
+                        "description": "Validation exception",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Validation exception"
+                                        },
+                                        "errors": {
+                                            "type": "object"
                                         }
                                     },
                                     "type": "object"
