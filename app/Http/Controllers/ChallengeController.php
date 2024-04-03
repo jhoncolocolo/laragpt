@@ -44,6 +44,11 @@ class ChallengeController extends Controller
     public function show($id)
     {
         $challenge = \ChallengeService::find($id);
+
+        //Validation of not exists model  $challenge
+        if($challenge == null){
+            return response()->json(['message' => 'No exists challenge with id : '.$id], 404);
+        }
         return response()->json($challenge);
     }
 

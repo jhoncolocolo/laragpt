@@ -62,7 +62,7 @@ class CompanyTest extends TestCase
      }
 
      /**
-     * test Exception when user send page with value Zero .
+     * test Exception when company send page with value Zero .
      * you can call only This test of this way php artisan test --filter testExceptionPageValueZero
      * @return  void
      */
@@ -80,7 +80,7 @@ class CompanyTest extends TestCase
      }
 
      /**
-     * test Exception when user send page with not integer value.
+     * test Exception when company send page with not integer value.
      * you can call only This test of this way php artisan test --filter testExceptionPageNonIntegerValue
      * @return  void
      */
@@ -98,7 +98,7 @@ class CompanyTest extends TestCase
      }
 
      /**
-     * test when user send page with value greater than the pages exist according registries of database.
+     * test when company send page with value greater than the pages exist according registries of database.
      * you can call only This test of this way php artisan test --filter testPageBeyondLimit
      * @return  void
      */
@@ -115,7 +115,7 @@ class CompanyTest extends TestCase
      }
 
      /**
-     * test when user send page with value greater than the first page according registries of database.
+     * test when company send page with value greater than the first page according registries of database.
      * you can call only This test of this way php artisan test --filter testPageGreaterThanFirst
      * @return  void
      */
@@ -179,6 +179,23 @@ class CompanyTest extends TestCase
 
        $response->assertStatus(200);
    }
+
+   /**
+     * test when specific company not exists in databse
+     * you can call only This test of this way php artisan test --filter testChallengeGetByIdNotFound
+     * @return  void
+     */
+    public function testCompanyGetByIdNotFound()
+    {
+        $id = 3;
+        $response = $this->get('/api/companies/'.$id);
+
+        $response->assertStatus(404)
+            ->assertJson([
+                'message' => 'No exists company with id : '.$id
+            ]);
+    }
+
 
    /**
      * test create company.

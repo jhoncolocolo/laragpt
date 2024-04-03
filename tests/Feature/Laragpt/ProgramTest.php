@@ -82,7 +82,7 @@ class ProgramTest extends TestCase
      }
 
      /**
-     * test Exception when user send page with not integer value.
+     * test Exception when program send page with not integer value.
      * you can call only This test of this way php artisan test --filter testExceptionPageNonIntegerValue
      * @return  void
      */
@@ -100,7 +100,7 @@ class ProgramTest extends TestCase
      }
 
      /**
-     * test when user send page with value greater than the pages exist according registries of database.
+     * test when program send page with value greater than the pages exist according registries of database.
      * you can call only This test of this way php artisan test --filter testPageBeyondLimit
      * @return  void
      */
@@ -117,7 +117,7 @@ class ProgramTest extends TestCase
      }
 
      /**
-     * test when user send page with value greater than the first page according registries of database.
+     * test when program send page with value greater than the first page according registries of database.
      * you can call only This test of this way php artisan test --filter testPageGreaterThanFirst
      * @return  void
      */
@@ -181,6 +181,22 @@ class ProgramTest extends TestCase
 
        $response->assertStatus(200);
    }
+
+   /**
+     * test when specific company not exists in databse
+     * you can call only This test of this way php artisan test --filter testProgramGetByIdNotFound
+     * @return  void
+     */
+    public function testProgramGetByIdNotFound()
+    {
+        $id = 3;
+        $response = $this->get('/api/programs/'.$id);
+
+        $response->assertStatus(404)
+            ->assertJson([
+                'message' => 'No exists program with id : '.$id
+            ]);
+    }
 
    /**
      * test create program.

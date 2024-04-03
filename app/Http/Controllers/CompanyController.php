@@ -44,6 +44,10 @@ class CompanyController extends Controller
     public function show($id)
     {
         $company = \CompanyService::find($id);
+        //Validation of not exists model  $challenge
+        if($company == null){
+            return response()->json(['message' => 'No exists company with id : '.$id], 404);
+        }
         return response()->json($company);
     }
 

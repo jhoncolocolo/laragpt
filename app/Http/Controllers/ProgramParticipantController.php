@@ -44,6 +44,10 @@ class ProgramParticipantController extends Controller
     public function show($id)
     {
         $programParticipant = \ProgramParticipantService::find($id);
+        //Validation of not exists model $programParticipant
+        if($programParticipant == null){
+            return response()->json(['message' => 'No exists Program Participant with id : '.$id], 404);
+        }
         return response()->json($programParticipant);
     }
 

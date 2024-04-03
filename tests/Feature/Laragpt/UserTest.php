@@ -170,6 +170,22 @@ class UserTest extends TestCase
    }
 
    /**
+     * test when specific company not exists in databse
+     * you can call only This test of this way php artisan test --filter testUserGetByIdNotFound
+     * @return  void
+     */
+    public function testUserGetByIdNotFound()
+    {
+        $id = 3;
+        $response = $this->get('/api/users/'.$id);
+
+        $response->assertStatus(404)
+            ->assertJson([
+                'message' => 'No exists user with id : '.$id
+            ]);
+    }
+
+   /**
      * test create user.
      *
      * @return  void

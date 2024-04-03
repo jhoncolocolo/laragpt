@@ -45,6 +45,10 @@ class ProgramController extends Controller
     public function show($id)
     {
         $program = \ProgramService::find($id);
+        //Validation of not exists model $program
+        if($program == null){
+            return response()->json(['message' => 'No exists program with id : '.$id], 404);
+        }
         return response()->json($program);
     }
 

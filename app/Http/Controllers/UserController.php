@@ -44,6 +44,10 @@ class UserController extends Controller
     public function show($id)
     {
         $user = \UserService::find($id);
+        //Validation of not exists model  $user
+        if($user == null){
+            return response()->json(['message' => 'No exists user with id : '.$id], 404);
+        }
         return response()->json($user);
     }
 
