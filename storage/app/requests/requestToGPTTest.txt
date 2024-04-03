@@ -1,6 +1,6 @@
 Generame un Json con un array de objetos en total 25 objetos aleatorios para program_id,
-entity_type y entity_id para entity_type Las Opciones pueden ser cualquiera entre
+entitiable_type y entitiable_id para entitiable_type Las Opciones pueden ser cualquiera entre
 App\\Models\\User,App\\Models\\Challenge, App\\Models\\Company para program_id Valores
-aleatorios entre 1 y 15 y para entity_id Si es App\\Model\\User valores aleatorios entre 1 y 25,
+aleatorios entre 1 y 15 y para entitiable_id Si es App\\Model\\User valores aleatorios entre 1 y 25,
 si es App\\Models\\Challenge valores aleatorios entre 1 y 45 o
 si es es App\\Models\\Company valores aleatorios entre 1 y 35
